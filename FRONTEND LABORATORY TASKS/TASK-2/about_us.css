@@ -1,0 +1,84 @@
+/* Element Selector */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f2f7ff;
+    color: #333333;
+}
+
+/* Element Selector */
+header {
+    background-color: #2563eb;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* Class Selector */
+.tagline {
+    font-size: 18px;
+    color: #e0f2fe;
+}
+
+/* ID Selector */
+#about {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    border-left: 5px solid #2563eb;
+}
+
+/* Element Selector */
+h2 {
+    color: #1d4ed8;
+}
+
+/* Class Selector */
+.favorites,
+.places,
+.contact {
+    background-color: white;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 10px;
+}
+
+/* Ordered List Styling */
+.favorites ol {
+    list-style-type: upper-roman;
+    padding-left: 35px;
+}
+
+/* Unordered List Styling */
+.places ul {
+    list-style-type: square;
+    padding-left: 35px;
+}
+
+/* List Element Selector */
+li {
+    padding: 8px;
+    margin: 5px;
+}
+
+/* Pseudo-class Selector */
+li:hover {
+    background-color: #dbeafe;
+    cursor: pointer;
+}
+
+/* Pseudo-class Selector */
+a:hover {
+    color: rgb(220, 38, 38);
+    text-decoration: none;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #1e293b;
+    color: white;
+    padding: 15px;
+}
