@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melody - Music for Everyone</title>
+    <link rel="stylesheet" href="project.css">
+</head>
+<body>
+    <div class="layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="logo">♫ Melody</div>
+
+        <div class="menu">
+            <p class="active">🏠 Home</p>
+            <p>🔍 Search</p>
+            <p>📚 Your Library</p>
+            <p>❤️ Liked Songs</p>
+        </div>
+
+        <h3>YOUR PLAYLISTS</h3>
+
+        <div class="menu">
+            <p>🎧 Chill Vibes</p>
+            <p>🌙 Night Music</p>
+            <p>🔥 Trending</p>
+        </div>
+
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+
+        <div class="topbar">
+            <input
+                class="search"
+                id="search"
+                type="text"
+                placeholder="🔍 Search songs..."
+                oninput="searchSongs()"
+            >
+
+            <div class="profile">👤 My Profile</div>
+        </div>
+
+        <!-- Hero Section -->
+        <section class="hero">
+
+            <div>
+                <p>WELCOME TO MELODY</p>
+
+                <h1>Music for your soul.</h1>
+
+                <p>Discover music. Feel every beat.</p>
+
+                <button onclick="playSong(0)">▶ Listen Now</button>
+            </div>
+
+            <div class="hero-art">🎧</div>
+
+        </section>
+
+        <!-- Recently Played -->
+        <div class="section-title">
+            <h2>Recently Played</h2>
+            <span>See all →</span>
+        </div>
+
+        <div class="cards" id="recent">
+
+            <div class="card" onclick="playSong(0)">
+                <img class="cover"
+                src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500"
+                alt="Headphones">
+                <h3>Dream Music</h3>
+                <p>Relax and enjoy</p>
+            </div>
+
+            <div class="card" onclick="playSong(1)">
+                <img class="cover"
+                src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=500"
+                alt="Music studio">
+                <h3>Love Songs</h3>
+                <p>Feel the music</p>
+            </div>
+
+            <div class="card" onclick="playSong(2)">
+                <img class="cover"
+                src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=500"
+                alt="Concert">
+                <h3>Chill Beats</h3>
+                <p>Music for your mood</p>
+            </div>
+
+            <div class="card" onclick="playSong(3)">
+                <img class="cover"
+                src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=500"
+                alt="Singer">
+                <h3>Acoustic Love</h3>
+                <p>Beautiful melodies</p>
+            </div>
+
+        </div>
+
+        <!-- Made For You -->
+        <div class="section-title">
+            <h2>Made For You</h2>
+            <span>See all →</span>
+        </div>
+
+        <div class="cards">
+
+            <div class="card" onclick="playSong(1)">
+                <img class="cover"
+                src="https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=500"
+                alt="Guitar">
+                <h3>Daily Mix</h3>
+                <p>Your favourite music</p>
+            </div>
+
+            <div class="card" onclick="playSong(2)">
+                <img class="cover"
+                src="https://images.unsplash.com/photo-1519682337058-a94d519337bc?w=500"
+                alt="Night sky">
+                <h3>Night Vibes</h3>
+                <p>Perfect for late nights</p>
+            </div>
+
+            <div class="card" onclick="playSong(3)">
+                <img class="cover"
+                src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=500"
+                alt="Music festival">
+                <h3>Top Hits</h3>
+                <p>Popular tracks</p>
+            </div>
+
+            <div class="card" onclick="playSong(0)">
+                <img class="cover"
+                src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=500"
+                alt="Music">
+                <h3>Focus Music</h3>
+                <p>Stay in your zone</p>
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+<!-- Music Player -->
+<div class="player">
+
+    <div class="now-playing">
+        <img id="currentImage"
+        src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=200"
+        alt="Current song">
+
+        <div>
+            <h4 id="songName">Dream Music</h4>
+            <p>Melody Playlist</p>
+        </div>
+    </div>
+
+    <div class="controls">
+
+        <button onclick="previousSong()">⏮</button>
+
+        <button class="play" id="playButton"
+        onclick="togglePlay()">▶</button>
+
+        <button onclick="nextSong()">⏭</button>
+
+        <p id="status">Ready to play</p>
+
+    </div>
+
+    <div class="volume">
+        🔊
+        <input type="range" min="0" max="1"
+        step="0.1" value="1" id="volume">
+    </div>
+
+</div>
+
+<audio id="audio"></audio>
+
+<script href="project.js"></script>
+</body>
+</html>
